@@ -129,3 +129,23 @@ GIT_EXTERNAL_DIFF=$HOME/scripts/custom_git_diff.sh
 export GIT_EXTERNAL_DIFF
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# virtualenv wrapper
+source /usr/local/bin/virtualenvwrapper.sh
+
+# git aliases
+alias ga='git add'
+alias gpsh='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpll='git pull'
+alias gcl='git clone'
+alias gco='git-cola'
