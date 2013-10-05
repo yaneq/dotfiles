@@ -14,6 +14,8 @@ ZSH_THEME="agnoster"
 # Git Aliases
 alias ga='git add'
 alias gpsh='git push'
+alias gpsho='git push origin'
+alias gpm='git push mine'
 alias gl='git log'
 alias gs='git status'
 alias gd='git diff'
@@ -21,17 +23,23 @@ alias gdc='git diff --cached'
 alias gm='git commit -m'
 alias gma='git commit -am'
 alias gb='git branch'
-alias gc='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
 alias gpll='git pull'
+alias gpllo='git pull origin'
 alias gcl='git clone'
-alias gco='git-cola'
+alias gc='git checkout'
 alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 
+# General aliases
+alias ltr='ls -ltr'
+
+# deactivate globs for some commands
+alias rake='noglob rake'
+alias i='noglob i'
 
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+# CASE_SENSITIVE="false"
 
 # Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -66,4 +74,10 @@ DEFAULT_USER=jan
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/jan/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/jan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/jan/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/jan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/jan/.rvm/bin
+export PATH=$PATH:/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/jan/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/jan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/jan/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/jan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/jan/.rvm/bin:/usr/local/share/npm/bin
+
+# add path from .pathext file
+
+
+# add path from .pathext file
+source ./.pathext
