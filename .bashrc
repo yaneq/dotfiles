@@ -130,9 +130,6 @@ export GIT_EXTERNAL_DIFF
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# virtualenv wrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
 # git aliases
 alias ga='git add'
 alias gpsh='git push'
