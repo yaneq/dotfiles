@@ -71,9 +71,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -104,13 +101,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#include pythonrc file
-PYTHONSTARTUP=~/.pythonrc.py
-export PYTHONSTARTUP
-
-parse_git_branch ()
+function parse_git_branch ()
 {
-  git status 2> /dev/null | head -n 1 |sed 's#\#\ On\ branch\ \(.*\)#(git::\1)#'
+  git status 2> /dev/null | head -n 1 |sed 's#\#\ \(.*\)#(git::\1)#'
 }
 function get_pwd() {
    echo "${PWD/$HOME/~}"
@@ -125,14 +118,11 @@ export GIT_EDITOR="$vim"
 export PS1="\[\033[0;36m\]\u \[\033[1;32m\]\$(parse_git_branch)\[\033[01;32m\]\[\033[0;33m\]\$(get_pwd)\[\033[00m\]: "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-GIT_EXTERNAL_DIFF=$HOME/scripts/custom_git_diff.sh
-export GIT_EXTERNAL_DIFF
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # git aliases
 alias ga='git add'
-alias gpsh='git push'
+alias gp='git push'
 alias gl='git log'
 alias gs='git status'
 alias gd='git diff'
@@ -146,4 +136,8 @@ alias grr='git remote rm'
 alias gp='git push'
 alias gpll='git pull'
 alias gcl='git clone'
-alias gco='git-cola'
+alias gco='git checkout'
+alias gpdd='gpll devex develop'
+alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v develop`'
+
