@@ -107,3 +107,6 @@ export PATH="/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+alias rake='noglob rake'
+alias i='noglob i'
+
