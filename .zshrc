@@ -91,21 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/jan/.rvm/gems/ruby-1.9.3-p429/bin:/Users/jan/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/jan/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/jan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export PATH="/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/X11/bin"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
