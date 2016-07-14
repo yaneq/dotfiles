@@ -38,7 +38,7 @@ alias gcd='gco develop'
 alias gcpd='gcd && gpdd'
 
 # General aliases
-alias ltr='ls -ltr'
+alias ltr='ls -lrSk'
 
 # deactivate globs for some commands
 alias rake='noglob rake'
