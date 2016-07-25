@@ -1,0 +1,25 @@
+[user]
+	name = Jan Koeppen
+	email = jan@yaneq.com
+[core]
+	excludesfile = /Users/jan/.gitignore_global
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[difftool "bc"]
+        path = '/Users/jan/Applications/Beyond Compare.app/Contents/MacOS/BCompare'
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = true
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = matching
