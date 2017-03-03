@@ -37,7 +37,7 @@ alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v d
 alias gpdd='gpll devex develop'
 alias gcd='gco develop'
 alias gcpd='gcd && gpdd'
-alias migrate_all='rake db:migrate && RACK_ENV=test rake db:migrate'
+alias migrate_all='bundle install && rake db:migrate && RACK_ENV=test rake db:migrate'
 
 # General aliases
 alias ltr='ls -lrSk'
