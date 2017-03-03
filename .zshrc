@@ -96,7 +96,9 @@ export PATH="/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/X
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias rake='noglob rake'
-alias i='noglob i'
+# alias i='noglob i'
+
+setopt no_bare_glob_qual
 
 export ANDROID_HOME=/Users/jan/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
