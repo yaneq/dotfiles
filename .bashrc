@@ -112,6 +112,7 @@ function get_pwd() {
 set -o emacs
 export EDITOR="$vim"
 export GIT_EDITOR="$vim"
+export ANDROID_HOME=/Users/jan/Library/Android/sdk
 
 # Add git and svn branch names
 
@@ -140,4 +141,7 @@ alias gco='git checkout'
 alias gpdd='gpll devex develop'
 alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v develop`'
+
+export ANDROID_HOME=/Users/jan/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 

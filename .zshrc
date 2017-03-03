@@ -98,3 +98,5 @@ export PATH="/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/X
 alias rake='noglob rake'
 alias i='noglob i'
 
+export ANDROID_HOME=/Users/jan/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
