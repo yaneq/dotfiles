@@ -11,41 +11,6 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Git Aliases
-alias ga='git add'
-alias gp='git push'
-alias gpo='git push origin'
-alias gpm='git push mine'
-alias pushit='git push mine HEAD'
-alias pushit!='git push mine HEAD -f'
-alias gpll='git pull'
-alias gpllo='git pull origin'
-alias gs='git status'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gc='git commit -m'
-alias gca='git commit -am'
-alias gb='git branch'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gcl='git clone'
-alias gl='git log'
-alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
-alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v develop`'
-
-# devex specific aliases
-alias gpdd='gpll devex develop'
-alias gcd='gco develop'
-alias gcpd='gcd && gpdd'
-alias migrate_all='bundle install && rake db:migrate && RACK_ENV=test rake db:migrate'
-
-# General aliases
-alias ltr='ls -lrSk'
-
-# deactivate globs for some commands
-alias rake='noglob rake'
-# alias i='noglob i'
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="false"
 

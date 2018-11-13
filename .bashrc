@@ -76,22 +76,13 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -la'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -103,7 +94,7 @@ fi
 
 function parse_git_branch ()
 {
-  git status 2> /dev/null | head -n 1 |sed 's#\#\ \(.*\)#(git::\1)#'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
 function get_pwd() {
    echo "${PWD/$HOME/~}"
@@ -112,35 +103,14 @@ function get_pwd() {
 set -o emacs
 export EDITOR="$vim"
 export GIT_EDITOR="$vim"
-export ANDROID_HOME=/Users/jan/Library/Android/sdk
 
 # Add git and svn branch names
 
-export PS1="\[\033[0;36m\]\u \[\033[1;32m\]\$(parse_git_branch)\[\033[01;32m\]\[\033[0;33m\]\$(get_pwd)\[\033[00m\]: "
+export PS1="\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]: "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# git aliases
-alias ga='git add'
-alias gp='git push'
-alias gl='git log'
-alias gs='git status'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gm='git commit -m'
-alias gma='git commit -am'
-alias gb='git branch'
-alias gc='git checkout'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gp='git push'
-alias gpll='git pull'
-alias gcl='git clone'
-alias gco='git checkout'
-alias gpdd='gpll devex develop'
-alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
-alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v develop`'
 
 export ANDROID_HOME=/Users/jan/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
