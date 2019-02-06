@@ -9,18 +9,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias -- -="cd -"
-alias cd..='cd ..'
-alias cd...='cd .. && cd ..'
-alias src="cd ~/src"
 
 # misc
 alias ll='ls -alF'
 alias la='ls -la'
 alias l='ls -CF'
-alias ltr='ls -ltr'
-alias x='exit'
-alias sudo='sudo '
+alias ltr='ls -ltra'
 alias mv='mv -iv'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -50,4 +44,5 @@ alias gb='git branch'
 alias gl='git log'
 alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v develop`'
-alias git_recently_updated_branches='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
+alias git_recently_updated_branches='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
+

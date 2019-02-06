@@ -1,0 +1,5 @@
+function compress_with_password() { zip -e $1.zip $1 ; }
+
+function compress_folder_with_password() { zip -er $1.zip $1 ; }
+
+function generate_password() { openssl rand -base64 $1 ; }
