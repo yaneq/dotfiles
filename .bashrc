@@ -100,10 +100,3 @@ export GIT_EDITOR="$vim"
 export PS1="\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]: "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
-export ANDROID_HOME=/Users/jan/Library/Android/sdk
-export ANDROID_SDK_ROOT=/Users/jan/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-

@@ -13,6 +13,22 @@ export CLICOLOR=1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+
+# PATH
+# Android Studio
+export ANDROID_HOME=/Users/jan/Library/Android/sdk
+export ANDROID_SDK_ROOT=/Users/jan/Library/Android/sdk
+PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+# Path
+PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+PATH="/usr/local/lib/node_modules/node/bin:$PATH"
+PATH="$PATH:$HOME/.rvm/bin"
+export PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
