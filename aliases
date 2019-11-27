@@ -11,10 +11,11 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # react native
-alias run-ios="react-native run-ios"
-alias log-ios="react-native log-ios"
-alias run-android="react-native run-android"
-alias log-android="react-native log-android"
+alias rn="npx react-native"
+alias rnri="npx react-native run-ios"
+alias rnli="npx react-native log-ios"
+alias rnra="npx react-native run-android"
+alias rnla="npx react-native log-android"
 
 # misc
 alias ll='ls -alF'
