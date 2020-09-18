@@ -16,6 +16,8 @@ alias rnri="npx react-native run-ios"
 alias rnli="npx react-native log-ios"
 alias rnra="npx react-native run-android"
 alias rnla="npx react-native log-android"
+alias rnclean="npx react-native-clean-project clean-project-auto"
+alias prettify_all_ts="npx prettier --write "**/*.ts""
 
 # misc
 alias ll='ls -alF'
