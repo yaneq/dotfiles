@@ -3,3 +3,7 @@ function compress_with_password() { zip -e $1.zip $1 ; }
 function compress_folder_with_password() { zip -er $1.zip $1 ; }
 
 function generate_password() { openssl rand -base64 $1 ; }
+
+function gifify() { ffmpeg -i $1.mov -s 600x400 -pix_fmt rgb24 -r 15 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif ; }
+
+function dig_all() { dig +nocmd $1 any +multiline +noall +answer ; }
