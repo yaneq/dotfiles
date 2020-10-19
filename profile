@@ -23,11 +23,7 @@ PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 # Path
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 PATH="/usr/local/lib/node_modules/node/bin:$PATH"
-PATH="$PATH:$HOME/.rvm/bin"
 export PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
