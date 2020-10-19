@@ -4,7 +4,7 @@
 [core]
 	excludesfile = /Users/jan/.gitignore_global
 	autocrlf = input
-	editor = /usr/local/bin/code
+	editor = vim
 	compression = -1
 [filter "media"]
 	clean = git-media-clean %f
@@ -13,5 +13,6 @@
 	default = matching
 [cola]
 	spellcheck = false
+	fontdiff = Ubuntu Mono for Powerline,18,-1,5,50,0,0,0,0,0
 [merge]
 	conflictstyle = diff3
