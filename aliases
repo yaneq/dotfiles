@@ -60,10 +60,14 @@ alias git_recently_updated_branches='for branch in `git branch -r | grep -v HEAD
 alias cho='~/projects/timetrack/timetrack.py "-project" "chores"'
 alias chores='~/projects/timetrack/timetrack.py "-project" "chores"'
 alias penb='~/projects/timetrack/timetrack.py "-project" "Penny"'
-alias pen='~/projects/timetrack/timetrack.py "-project" "PennyApp"'
+alias pen1='~/projects/timetrack/timetrack.py "-project" "PennyApp"'
+alias penflat='~/projects/timetrack/timetrack.py "-project" "Penny Flat"'
+alias pen='penflat'
 alias penex='~/projects/timetrack/timetrack.py "-project" "PennyApp Extra"'
 alias canoe='~/projects/timetrack/timetrack.py "-project" "Canoe"'
-alias gox='~/projects/timetrack/timetrack.py "-project" "Goxo"'
+alias gox1='~/projects/timetrack/timetrack.py "-project" "Goxo"'
+alias gox2='~/projects/timetrack/timetrack.py "-project" "Goxo 2"'
+alias gox='gox2'
 
 alias mine='~/projects/timetrack/timetrack.py "-project" "Mine"'
 
