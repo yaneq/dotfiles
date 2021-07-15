@@ -29,7 +29,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias grep='grep -s --color=auto --exclude-dir=\.svn --exclude-dir=\.git'
 alias realpath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'"
-alias pws="python -m SimpleHTTPServer"
+alias python_web_server="python -m SimpleHTTPServer"
 alias timestamp='date +%s'
 alias stripcolors='sed "s/\x1B\[\([0-9]\{1,2\}\(;[0-9]\{1,2\}\)\?\)\?[mGK]//g"'
 
@@ -41,7 +41,7 @@ alias ga='git add'
 alias gp='git push'
 alias pushit='git push mine HEAD'
 alias pushit!='git push mine HEAD -f'
-alias gpll='git pull'
+alias gpod='git pull origin develop'
 alias gpllo='git pull origin'
 alias gs='git status'
 alias gd='git diff'
@@ -52,8 +52,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gl='git log'
 alias gll='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
-alias git_delete_merged_branches='git branch -d `git branch --merged | grep -v master`'
-alias git_delete_merged_branches_develop='git branch -d `git branch --merged | grep -v master`'
+alias git_delete_merged_branches='git branch -d `git branch --merged | grep -viE "(develop|master)"`'
 alias git_recently_updated_branches='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
 
 # timetrack
@@ -64,14 +63,18 @@ alias pen1='~/projects/timetrack/timetrack.py "-project" "PennyApp"'
 alias penflat='~/projects/timetrack/timetrack.py "-project" "Penny Flat"'
 alias pen='penflat'
 alias penex='~/projects/timetrack/timetrack.py "-project" "PennyApp Extra"'
-alias canoe='~/projects/timetrack/timetrack.py "-project" "Canoe"'
-alias gox1='~/projects/timetrack/timetrack.py "-project" "Goxo"'
-alias gox2='~/projects/timetrack/timetrack.py "-project" "Goxo 2"'
-alias gox='gox2'
+alias aflr='~/projects/timetrack/timetrack.py "-project" "Aflorithmic"'
+alias rbkapp='~/projects/timetrack/timetrack.py "-project" "Rebeccas App"'
 
 alias mine='~/projects/timetrack/timetrack.py "-project" "Mine"'
+alias retro='~/projects/timetrack/timetrack.py "-project" "Reretro"'
 
 
 alias proj='~/projects/timetrack/timetrack.py "-project" "project"'
+alias podfire='~/projects/timetrack/timetrack.py "-project" "podfire"'
 alias i='~/projects/timetrack/timetrack.py'
 alias idid='~/projects/timetrack/idid.js'
+
+# other
+alias generate_password='openssl rand -base64 32'
+
