@@ -8,3 +8,6 @@ function gifify() { ffmpeg -i $1.mov -s 600x400 -pix_fmt rgb24 -r 15 -f gif - | 
 function convert_mov_to_webm() { ffmpeg -i $1.mov -vcodec libvpx -s 1393x556 -filter:a "atempo=1.8" -an $1.webm ; }
 
 function dig_all() { dig +nocmd $1 any +multiline +noall +answer ; }
+
+function ios_open_link() { xcrun simctl openurl booted "$1" ; }
+
