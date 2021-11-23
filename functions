@@ -11,3 +11,5 @@ function dig_all() { dig +nocmd $1 any +multiline +noall +answer ; }
 
 function ios_open_link() { xcrun simctl openurl booted "$1" ; }
 
+function local_ssl_tunel() { npx local-ssl-proxy --source $1 --target $2 ; }
+
