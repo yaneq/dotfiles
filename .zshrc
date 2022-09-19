@@ -112,7 +112,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # custom extension
-source ./aliases
+source ~/dotfiles/aliases
 
 # custom theme
 
@@ -123,4 +123,9 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=": "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
