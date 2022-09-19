@@ -1,0 +1,3 @@
+# activate git file-name case sensitivity
+git config --global core.ignorecase false
+
