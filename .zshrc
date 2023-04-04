@@ -129,3 +129,8 @@ export PATH="$(yarn global bin):$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+#rbenv
+eval "$(rbenv init - zsh)"
+
+#pyenv
+eval "$(pyenv init -)"
