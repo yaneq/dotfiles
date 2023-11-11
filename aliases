@@ -56,24 +56,21 @@ alias git_delete_merged_branches='git branch -d `git branch --merged | grep -viE
 alias git_recently_updated_branches='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
 
 # timetrack
-alias cho='~/projects/timetrack/timetrack.py "-project" "chores"'
 alias chores='~/projects/timetrack/timetrack.py "-project" "chores"'
-alias penb='~/projects/timetrack/timetrack.py "-project" "Penny"'
-alias pen1='~/projects/timetrack/timetrack.py "-project" "PennyApp"'
-alias penflat='~/projects/timetrack/timetrack.py "-project" "Penny Flat"'
-alias pen='penflat'
-alias penex='~/projects/timetrack/timetrack.py "-project" "PennyApp Extra"'
-alias aflr='~/projects/timetrack/timetrack.py "-project" "Aflorithmic"'
 alias rbkapp='~/projects/timetrack/timetrack.py "-project" "Rebeccas App"'
 
 alias mine='~/projects/timetrack/timetrack.py "-project" "Mine"'
 alias retro='~/projects/timetrack/timetrack.py "-project" "Reretro"'
 
+alias mx='~/projects/timetrack/timetrack.py "-project" "Market X"'
+alias xnews='~/projects/timetrack/timetrack.py "-project" "Xonic News"'
+alias hack='~/projects/timetrack/timetrack.py "-project" "Hacking"'
+alias penny='~/projects/timetrack/timetrack.py "-project" "Penny"'
 
 alias proj='~/projects/timetrack/timetrack.py "-project" "project"'
 alias podfire='~/projects/timetrack/timetrack.py "-project" "podfire"'
 alias i='~/projects/timetrack/timetrack.py'
-alias idid='~/projects/timetrack/idid.js'
+alias idid='~/projects/timetrack/idid.ts'
 
 # other
 alias generate_password='openssl rand -base64 32'
